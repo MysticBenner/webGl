@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce7654e6-aa6e-4724-9a88-822f70d1c21c" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QBlKz70TzIKUfdvJELLjiDiNaO" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CesiumTest" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/json" />
+      <recent name="$PROJECT_DIR$/html" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.threejs001.html">
+    <configuration name="h48.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/examples/json/h48.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="h50.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/examples/html5/h50.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="h51.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/examples/html5/h51.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="h52.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/examples/html5/h52.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="threejs001.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/examples/webgl/threejs001.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.threejs001.html" />
+        <item itemvalue="JavaScript Debug.h51.html" />
+        <item itemvalue="JavaScript Debug.h52.html" />
+        <item itemvalue="JavaScript Debug.h50.html" />
+        <item itemvalue="JavaScript Debug.h48.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce7654e6-aa6e-4724-9a88-822f70d1c21c" name="Default Changelist" comment="" />
+      <created>1567251809989</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567251809989</updated>
+      <workItem from="1567251811137" duration="2812000" />
+      <workItem from="1567254993588" duration="1295000" />
+      <workItem from="1567328544346" duration="6723000" />
+      <workItem from="1567392990084" duration="380000" />
+      <workItem from="1567407683514" duration="1427000" />
+      <workItem from="1567689141178" duration="3416000" />
+      <workItem from="1567736598785" duration="289000" />
+      <workItem from="1567740955606" duration="79000" />
+      <workItem from="1569152500672" duration="1154000" />
+      <workItem from="1569157977648" duration="232000" />
+      <workItem from="1569367347489" duration="1904000" />
+      <workItem from="1569481102755" duration="547000" />
+      <workItem from="1569550190757" duration="3178000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

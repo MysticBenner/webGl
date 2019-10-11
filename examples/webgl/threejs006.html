@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+本例实现空间内随机粒子组成的动态效果
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sixth Application</title>
+    <script type="text/javascript" src="./libs/three.js"></script>
+</head>
+<body>
+<div id="WebGL-output"></div>
+<script type="text/javascript">
+    function init() {
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setClearColor(new THREE.Color(0x000000, 1.0));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        camera.position.x = 20;
+        camera.position.y = 0;
+        camera.position.z = 150;
+
+        document.getElementById("WebGL-output").appendChild(renderer.domElement);
+
+        var cloud;
+
+
+        createParticles(2,true,0.8,true,true,0xffff00);
+        render();
+        //创建粒子系统（大小、透明度、粒子透明度、所有粒子是否具有相同颜色、所有粒子是否具有相同尺寸大小、粒子颜色）
+        function createParticles(size, transparent, opacity, vertexColors, sizeAttenuation, color) {
+            var geom = new THREE.Geometry();
+            var material = new THREE.PointCloudMaterial({
+                size: size,
+                transparent: transparent,
+                opacity: opacity,
+                vertexColors: vertexColors,
+                sizeAttenuation: sizeAttenuation,
+                color: color
+            });
+
+
+            var range = 500;
+            //使用循环创造随机的粒子添加到已创造的geom中
+            for (var i = 0; i < 20000; i++) {
+                var particle = new THREE.Vector3(Math.random() * range - range / 3, Math.random() * range - range / 3, Math.random() * range - range / 4);
+                geom.vertices.push(particle);
+                //定义颜色
+                var color = new THREE.Color(0xEEEEEE);
+                color.setHSL(color.getHSL().h, color.getHSL().s, Math.random() * color.getHSL().l);
+                geom.colors.push(color);
+
+            }
+            cloud = new THREE.PointCloud(geom, material);
+            cloud.name = "particles series";
+            scene.add(cloud);
+        }
+
+
+        var step = 0;
+
+        function render() {
+
+                step += 0.01;
+
+                cloud.rotation.x = step;
+                cloud.rotation.z = step;
+
+
+            requestAnimationFrame(render);
+            renderer.render(scene, camera);
+        }
+
+    }
+    window.onload = init;
+</script>
+</body>
+</html>

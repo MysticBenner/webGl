@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript String</title>
+</head>
+<body>
+<h1>examples of javascript string</h1>
+
+<button onclick="myFunction()">试一试</button>
+
+<p id="demo"></p>
+
+<p id="demo1">
+    show the names of cars
+</p>
+<p id="demo2">
+    show the names of cars
+</p>
+
+<p id="demo3">
+    show the names of cars
+</p>
+
+<p id="demo4">
+    show the names of cars
+</p>
+
+<script>
+    let car1 = "auto1";
+    let car2="auto2";
+    document.getElementById("demo1").innerHTML=car1+car2+(car1+car2).length;
+
+    let answer1 = "It's good to see you again!";
+    let answer2 = "He is called 'Bill'";
+    let answer3 = 'He is called "Bill"';
+
+    document.getElementById("demo2").innerHTML =
+        answer1 + "<br>" + answer2 + "<br>" + answer3;
+
+
+    document.getElementById("demo3").innerHTML=answer2.indexOf("is").toString();
+
+    function myFunction() {
+        let str = "a,b,c,d,e,f";
+        let arr = str.split(",");
+        document.getElementById("demo").innerHTML = arr[0];
+    }
+</script>
+</body>
+</html>

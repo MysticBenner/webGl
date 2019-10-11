@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>单击“试一试”以使用参数来调用函数</p>
+
+<button onclick="myFunction('Harry Potter','Wizard')">试一试</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction(name,job) {
+        document.getElementById("demo").innerHTML = "Welcome " + name + ", the " + job + ".";
+    }
+</script>
+</body>
+</html>

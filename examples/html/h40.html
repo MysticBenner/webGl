@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript numbers</title>
+</head>
+<body>
+<h1>JavaScript 数字</h1>
+
+<p>您可使用全局 JavaScript 函数 isNaN() 来确定某个值是否是数：</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+
+<script>
+    let x = 100 / "Apple";
+    document.getElementById("demo").innerHTML = isNaN(x).toString();
+
+    let myNumber = 32;
+    document.getElementById("demo1").innerHTML =
+        "32 = " + "<br>" +
+        " Decimal " + myNumber.toString(10) + "<br>" +
+        " Hexadecimal " + myNumber.toString(16) + "<br>" +
+        " Octal " + myNumber.toString(8) + "<br>" +
+        " Binary " + myNumber.toString(2);
+
+    myNumber = 2;
+    let txt = "";
+    while (myNumber != Infinity) {
+        myNumber = myNumber * myNumber;
+        txt = txt + myNumber + "<br>";
+    }
+    document.getElementById("demo2").innerHTML = txt;
+
+    document.getElementById("demo3").innerHTML =
+        Number(true) + "<br>" +
+        Number(false) + "<br>" +
+        Number("10") + "<br>" +
+        Number("  10") + "<br>" +
+        Number("10  ") + "<br>" +
+        Number(" 10  ") + "<br>" +
+        Number("10.33") + "<br>" +
+        Number("10,33") + "<br>" +
+        Number("10 33") + "<br>" +
+        Number("John");
+
+    myNumber=2;
+    document.getElementById("demo4").innerHTML=myNumber.valueOf().toString(2);
+</script>
+</body>
+</html>

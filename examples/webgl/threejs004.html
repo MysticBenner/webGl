@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+将上式中自定义的平面拉伸成立体，并加入使用鼠标即可转动的效果
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fourth Application</title>
+    <script type="text/javascript" src="./libs/three.js"></script>
+    <script type="text/javascript" src="./libs/OrbitControls.js"></script>
+</head>
+<body>
+<div id="WebGL-output">
+</div>
+<script type="text/javascript">
+    var orbit;
+    function init() {
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        var shape;
+        renderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.shadowMapEnabled = true;
+        //拉伸数据定义
+        var options = {
+            amount: 5,
+            bevelThickness: 2,
+            bevelSize: 0.5,
+            bevelEnabled: true,
+            bevelSegments: 3,
+            curveSegments: 12,
+            steps: 1
+        };
+
+        //将自定义图形加载到画面中
+        shape = createMesh(new THREE.ExtrudeGeometry(drawShape(), options));
+        scene.add(shape);
+
+
+        camera.position.x = -30;
+        camera.position.y = 70;
+        camera.position.z = 70;
+        camera.lookAt(new THREE.Vector3(10, 0, 0));
+
+        var step = 0;
+
+        orbit = new THREE.OrbitControls(camera, renderer.domElement);
+        document.getElementById("WebGL-output").appendChild(renderer.domElement);
+        render();
+
+        //自定义图形
+        function drawShape(){
+            //根据坐标画出自定义图形
+            var shape = new THREE.Shape();
+            shape.moveTo(10,10);
+            shape.quadraticCurveTo(15, 20, 20, 20);
+            shape.splineThru(
+                [new THREE.Vector2(25, 15),
+                    new THREE.Vector2(30, 25),
+                    new THREE.Vector2(35, 20),
+                ]);
+            shape.quadraticCurveTo(38,20,40,10);
+            return shape;
+        }
+        //在几何网上创建网格
+        function createMesh(geom) {
+
+            geom.applyMatrix(new THREE.Matrix4().makeTranslation(-20, 0, 0));
+
+            var meshMaterial = new THREE.MeshNormalMaterial;
+            meshMaterial.side = THREE.DoubleSide;
+
+            var mesh = THREE.SceneUtils.createMultiMaterialObject(geom, [meshMaterial]);
+
+            return mesh;
+        }
+        //渲染函数
+        function render() {
+
+            shape.rotation.y = step += 0.01;
+
+            orbit.update();
+
+            requestAnimationFrame(render);
+            renderer.render(scene, camera);
+        }
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
